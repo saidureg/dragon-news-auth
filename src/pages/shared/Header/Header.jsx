@@ -2,8 +2,8 @@ import logo from "../../../assets/logo.png";
 import moment from "moment";
 const Header = () => {
   return (
-    <div>
-      <img src={logo} alt="logo" />
+    <div className="text-center">
+      <img className="mx-auto" src={logo} alt="logo" />
       <p className="text-lg text-[#706F6F]">
         Journalism Without Fear or Favour
       </p>
