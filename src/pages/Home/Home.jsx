@@ -4,6 +4,7 @@ import LeftSideNavbar from "../shared/LeftSideNavbar/LeftSideNavbar";
 import Navbar from "../shared/Navbar/Navbar";
 import RightSideNavbar from "../shared/RightSideNavbar/RightSideNavbar";
 import BreakingNews from "./BreakingNews";
+import NewsCard from "./NewsCard";
 
 const Home = () => {
   const news = useLoaderData();
@@ -20,7 +21,9 @@ const Home = () => {
           <LeftSideNavbar></LeftSideNavbar>
         </div>
         <div className="md:col-span-2">
-          <h3 className="text-xl">Dragon News Home</h3>
+          {news.map((aNews, idx) => (
+            <NewsCard key={idx} news={aNews}></NewsCard>
+          ))}
         </div>
         <div>
           <RightSideNavbar></RightSideNavbar>
