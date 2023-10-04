@@ -15,11 +15,11 @@ const RightSideNavbar = () => {
       <div>
         <h3 className="text-2xl p-4">Login With</h3>
         <div className="space-y-2 p-4">
-          <button className="btn btn-outline w-full">
+          <button className="btn btn-outline w-full capitalize">
             <FaGoogle></FaGoogle> Login with Google
           </button>
-          <button className="btn btn-outline w-full">
-            <FaGithub></FaGithub> Login with Google
+          <button className="btn btn-outline w-full capitalize">
+            <FaGithub></FaGithub> Login with Github
           </button>
         </div>
       </div>
