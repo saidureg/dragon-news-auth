@@ -53,8 +53,8 @@ const Navbar = () => {
             <img src={avatarPic} />
           </div>
         </label>
-        <Link>
-          <button className="btn">Login</button>
+        <Link to="/login">
+          <button className="btn btn-secondary">Login</button>
         </Link>
       </div>
     </div>

@@ -20,7 +20,7 @@ const Home = () => {
           <LeftSideNavbar></LeftSideNavbar>
         </div>
         <div className="md:col-span-2">
-          <h3 className="text-6xl">Dragon News Home</h3>
+          <h3 className="text-xl">Dragon News Home</h3>
         </div>
         <div>
           <RightSideNavbar></RightSideNavbar>
