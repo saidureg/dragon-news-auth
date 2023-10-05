@@ -69,16 +69,19 @@ const RightSideNavbar = () => {
         <div className="px-4">
           <a
             className="flex items-center gap-2 border rounded-t-lg py-2 px-3"
-            href=""
+            href="https://www.facebook.com/"
           >
             <FaFacebook></FaFacebook> Facebook
           </a>
-          <a className="flex items-center gap-2 border-x py-2 px-3" href="">
+          <a
+            className="flex items-center gap-2 border-x py-2 px-3"
+            href="https://twitter.com/"
+          >
             <FaTwitter></FaTwitter> Twitter
           </a>
           <a
             className="flex items-center gap-2 border rounded-b-lg py-2 px-3"
-            href=""
+            href="https://www.instagram.com/?hl=en"
           >
             <FaInstagram></FaInstagram> Instagram
           </a>
