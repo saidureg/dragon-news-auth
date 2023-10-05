@@ -11,14 +11,18 @@ import qZone3 from "../../../assets/qZone3.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import swal from "sweetalert";
 
 const RightSideNavbar = () => {
-  const { googleSignIn, githubSignIn } = useContext(AuthContext);
+  const { user, googleSignIn, githubSignIn } = useContext(AuthContext);
 
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
   const handleGoogleSignIn = () => {
+    if (user) {
+      return swal("oops!", "you are already logged in as!", "error");
+    }
     googleSignIn(googleProvider)
       .then((result) => {
         console.log(result.user);
@@ -28,6 +32,9 @@ const RightSideNavbar = () => {
       });
   };
   const handleGithubSignIn = () => {
+    if (user) {
+      return swal("oops!", "you are already logged in as!", "error");
+    }
     githubSignIn(githubProvider)
       .then((result) => {
         console.log(result.user);

@@ -8,6 +8,7 @@ import PrivateRouter from "./PrivateRouter";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import About from "../pages/About/About";
 import Career from "../pages/Career/Career";
+import Categories from "../components/Categories/Categories";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
           </PrivateRouter>
         ),
         loader: () => fetch("/news.json"),
+      },
+      {
+        path: "/categories/:id",
+        element: <Categories />,
       },
       {
         path: "/login",

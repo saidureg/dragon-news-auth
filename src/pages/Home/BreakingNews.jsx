@@ -6,16 +6,18 @@ const BreakingNews = () => {
       <button className="btn btn-primary">Latest</button>
       <Marquee pauseOnHover="true" speed={100}>
         <Link className="mr-12" to="/">
-          I can be a React component, multiple React components, or just some
-          text.
+          Biden Pledges Nearly $3 Billion To Ukraine In Largest U.S. Military
+          Aid Package Yet...
         </Link>
         <Link className="mr-12" to="/">
-          I can be a React component, multiple React components, or just some
-          text.
+          Tucker Carlson Swears Vladimir Putin Is Winning The War In Ukraine...
+        </Link>
+        <Link className="mr-12" to="/">
+          Joe Biden announces $3 billion in Ukraine weapons aid...
         </Link>
         <Link to="/">
-          I can be a React component, multiple React components, or just some
-          text.
+          America Imported Over $6 Billion in Goods From Russia Since Ukraine
+          Invasion...
         </Link>
       </Marquee>
     </div>

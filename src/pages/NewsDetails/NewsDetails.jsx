@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import Header from "../shared/Header/Header";
 import Navbar from "../shared/Navbar/Navbar";
 import RightSideNavbar from "../shared/RightSideNavbar/RightSideNavbar";
@@ -12,8 +12,6 @@ const NewsDetails = () => {
   const { id } = useParams();
   const newsAll = useLoaderData();
   const findNews = newsAll.find((news) => news._id === id);
-  console.log(id);
-  console.log(findNews);
 
   return (
     <div className="mb-12">
@@ -31,9 +29,11 @@ const NewsDetails = () => {
             </h3>
             <p className="text-[#706F6F] text-sm">{findNews.details}</p>
             <div>
-              <button className="my-3 bg-[#D72050] text-white py-2 px-4 rounded flex items-center gap-2 text-xl font-medium">
-                <BsArrowLeft /> All news in this category
-              </button>
+              <Link to={`/categories/${findNews.category_id}`}>
+                <button className="my-3 bg-[#D72050] text-white py-2 px-4 rounded flex items-center gap-2 text-xl font-medium">
+                  <BsArrowLeft /> All news in this category
+                </button>
+              </Link>
             </div>
           </div>
           <div className="mt-8">

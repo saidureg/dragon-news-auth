@@ -4,7 +4,7 @@ const Career = () => {
   return (
     <div>
       <Navbar />
-      <h3>Career</h3>
+      <h3>Career content coming soon .....</h3>
     </div>
   );
 };
