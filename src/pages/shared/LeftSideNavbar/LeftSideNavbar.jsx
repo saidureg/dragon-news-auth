@@ -25,7 +25,7 @@ const LeftSideNavbar = () => {
               className="block px-4"
               key={idx}
             >
-              {category.name}{" "}
+              <ul className="btn-outline p-3 rounded-lg">{category.name}</ul>
             </NavLink>
           ))}
         </div>

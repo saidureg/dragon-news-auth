@@ -8,17 +8,50 @@ import {
 import qZone1 from "../../../assets/qZone1.png";
 import qZone2 from "../../../assets/qZone2.png";
 import qZone3 from "../../../assets/qZone3.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 const RightSideNavbar = () => {
+  const { googleSignIn, githubSignIn } = useContext(AuthContext);
+
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+
+  const handleGoogleSignIn = () => {
+    googleSignIn(googleProvider)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  const handleGithubSignIn = () => {
+    githubSignIn(githubProvider)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div>
       <div>
         <h3 className="text-2xl p-4">Login With</h3>
         <div className="space-y-2 p-4">
-          <button className="btn btn-outline w-full capitalize">
+          <button
+            onClick={handleGoogleSignIn}
+            className="btn btn-outline w-full capitalize"
+          >
             <FaGoogle></FaGoogle> Login with Google
           </button>
-          <button className="btn btn-outline w-full capitalize">
+          <button
+            onClick={handleGithubSignIn}
+            className="btn btn-outline w-full capitalize"
+          >
             <FaGithub></FaGithub> Login with Github
           </button>
         </div>
